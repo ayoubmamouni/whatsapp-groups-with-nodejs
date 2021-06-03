@@ -1,0 +1,189 @@
+.whatsapp-group-card{
+    background:#0a9818;
+    padding: 1rem;
+    margin:.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: 300ms;
+    @media screen and (min-width: 768px) {
+      &:hover{
+          transform: scale(1.02);
+          box-shadow: 0px 0px 15px #222;
+      }
+    }
+    .whatsapp-group-icon{
+      display: flex;
+      justify-content:center;
+      svg,img{
+          width: 150px;
+          object-fit: contain;
+      }
+    }
+    .whatsapp-goup-name{
+      text-align: center;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 3px;
+      width: 100%;
+      max-width: 350px;
+      overflow: auto;
+      margin: 5px 0;
+      a{
+        font-size: 25px;
+        opacity:.8;
+        color:#04fb00;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+
+    .whatsapp-group-link{
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 3px;
+      width: 100%;
+      max-width: 350px;
+      overflow: auto;
+      margin: 5px 0;
+      b{
+        font-size: 20px;
+        color: aqua;
+        opacity: .7;
+      }
+      a{
+        font-size: 14px;
+        color:#23a0ee;
+        text-decoration: none;
+      }
+    }
+
+    .whatsapp-group-description, .whatsapp-group-category{
+      width: 100%;
+      max-width: 350px;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 3px;
+      overflow: auto;
+      margin: 3px 0;
+      .desc-header, .category-header{
+        background-color: rgb(68, 67, 67);
+        width: 100%;
+        padding: .5rem;
+        b{
+          font-size: 20px;
+          opacity: .7;
+        }
+      }
+      .desc-text, .category{
+        padding: .5rem;
+        p,h3{
+          font-size: 15px;
+          color: rgb(186, 255, 83);
+          opacity: .7;
+        }
+      }
+      .category{
+        p{
+          font-size: 18px;
+        }
+      }
+    }
+
+    .whatsapp-group-clicks{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: .2rem;
+      margin: 10px 0;
+      .count{
+        margin: 0 10px;
+        background: #222;
+        padding: 2px 5px;
+        color: yellow;
+        display: flex;
+        border-radius: 3px;
+        span{
+          svg{
+            width: 15px;
+            // margin: 0 5px;
+          }
+        }
+      }
+    }
+    
+    .whatsapp-group-votes{
+      display: flex;
+      gap: 1rem;
+      margin: 10px 0;
+      margin-bottom: 1rem;
+      .like, .dislike{
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        transition: 250ms;
+      }
+
+      .like{
+        color:#67ff48;
+        border: 2px solid #199600;
+        background-color: #025c00;
+        &:hover, &:active{
+          border: 2px solid #216713;
+        background-color: #0b9509;
+        }
+      }
+      .dislike{
+        color: rgb(255, 143, 103);
+        border: 2px solid rgb(157, 45, 4);
+        background-color: rgb(132, 41, 8);
+        &:hover, &:active{
+          border: 2px solid rgb(116, 40, 12);
+          background-color: rgb(203, 83, 39);
+        }
+      }
+    }
+    .btns{
+      display: flex;
+      flex-direction: column;
+      a{
+        text-decoration:none;
+        color: white;
+        padding: 7px 15px;
+        border-radius:3rem;
+        transition: 300ms;
+        background: #39b0e7;
+        opacity:.8;
+        margin: 5px 0;
+        font-weight: 700;
+        width: 100%;
+        max-width: 350px;
+        svg{
+          width: 20px;
+          margin-left: 5px;
+        }
+      }
+      .enter{
+        &:hover, &:active{
+          background-color: #222;
+          color: #fff;
+          transform: scale(1.02);
+        }
+      }
+      .report{
+        &:hover, &:active{
+          background-color: rgb(116, 36, 7);
+          color: orangered;
+          transform: scale(1.02);
+        }
+      }
+    }
+  }

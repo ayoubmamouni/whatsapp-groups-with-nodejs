@@ -1,0 +1,21 @@
+.whatsapp{
+    background: #009103;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    svg{
+        width: 300px;
+    }
+    .desc{
+        padding: 2rem;
+        // text-align: center;
+        b{
+            font-size: 2em;
+            font-weight: 700;
+        }
+        p{
+            font-size: 1em;
+            margin: 1rem 0;
+        }
+    }
+}

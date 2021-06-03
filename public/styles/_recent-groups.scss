@@ -1,0 +1,81 @@
+.recent-groups{
+    background-color: rgb(68, 4, 63);
+    h3{
+        text-align: center;
+        font-size: 25px;
+        opacity: .7;
+        padding-top: 15px;
+    }
+    p{
+        opacity: .4;
+        margin-top: 1rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        svg{
+            width: 40px;
+            margin: 0 10px;
+        }
+    }
+    .scroll-recent-groups{
+        padding: 1rem;
+        overflow-x: scroll;
+        display: flex;
+        gap: .5rem;
+        max-width: 100%;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar{
+            // display: none;
+            background-color: transparent;
+            height: 10px;
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            background-color: rgb(4, 255, 0);
+        }
+        .recent-goup-card{
+            background-color: rgb(30, 12, 48);
+            padding: 1rem;
+            width: 100%;
+            min-width: 300px;
+            max-width: 320px;
+            border-radius: 3px;
+            .recent-group-card-details{
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+                background-color: #111;
+                border-radius: 3px;
+                margin: 5px 0;
+                padding: 5px;
+                label{
+                    font-size: 18px;
+                    color: skyblue;
+                    opacity: .6;
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        width: 18px;
+                        margin: 0 5px;
+                    }
+                }
+                b{
+                    margin: 5px 20px;
+                    font-size: 14px;
+                    color: rgb(17, 159, 17);
+                    opacity: .9;
+                }
+                a{
+                    padding:10px;
+                    background-color: rgb(7, 111, 0);
+                    border-radius: 3px;
+                    color: aqua;
+                    text-align: center;
+                    font-size: 15px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

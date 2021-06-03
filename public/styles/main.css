@@ -1,0 +1,954 @@
+html, body, *, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.barTop {
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #222;
+  z-index: 20;
+  width: 100%;
+  margin: 0;
+}
+
+.barTop .links {
+  padding: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .8rem;
+}
+
+@media screen and (max-width: 550px) {
+  .barTop .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .barTop .links a {
+    width: 100%;
+  }
+}
+
+.barTop .links a {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(55, 52, 52, 0.696);
+  padding: 10px 15px;
+  border-radius: 1.5rem;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.barTop .links a:hover {
+  color: rgba(49, 47, 47, 0.876);
+  background-color: rgba(255, 255, 255, 0.786);
+}
+
+.barTop .links a svg {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.whatsapp {
+  background: #009103;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.whatsapp svg {
+  width: 300px;
+}
+
+.whatsapp .desc {
+  padding: 2rem;
+}
+
+.whatsapp .desc b {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.whatsapp .desc p {
+  font-size: 1em;
+  margin: 1rem 0;
+}
+
+.add-new-group {
+  background-color: #020f06;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-new-group .add-group-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add-new-group .add-group-btn .button-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid rgba(255, 255, 255, 0.538);
+  border-radius: 3rem;
+  padding: 0.2rem 1rem;
+  background: rgba(11, 133, 2, 0.538);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: .8;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.add-new-group .add-group-btn .button-svg:active, .add-new-group .add-group-btn .button-svg:hover, .add-new-group .add-group-btn .button-svg:focus {
+  border: 3px solid rgba(255, 255, 255, 0.834);
+  background: #0b8502;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  opacity: 1;
+}
+
+.add-new-group .add-group-btn .button-svg b {
+  font-size: 20px;
+  margin: 0 8px;
+  font-weight: 700;
+}
+
+.add-new-group .add-group-btn .button-svg svg {
+  width: 50px;
+}
+
+.add-new-group .add-new-group-form {
+  width: 95%;
+  max-width: 750px;
+  background: #02180b;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.add-new-group .add-new-group-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .add-new-group .add-new-group-form form {
+    padding: .3rem;
+  }
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input label {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input label span {
+  color: rgba(255, 255, 0, 0.614);
+  font-size: 12px;
+  margin: 0 3px;
+  font-weight: 200;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input label .required {
+  color: orangered;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input label .optional {
+  color: aqua;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input input, .add-new-group .add-new-group-form form .form-control .form-input textarea, .add-new-group .add-new-group-form form .form-control .form-input select {
+  padding: 7px 14px;
+  outline: none;
+  border-radius: 3px;
+  border: 2px solid #4fe54f;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input #link {
+  direction: ltr;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input textarea {
+  resize: none;
+  border-radius: 5px;
+  height: 100px;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input select {
+  width: 150px;
+  font-weight: 700;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input select option {
+  font-weight: 700;
+  background-color: #0f480f;
+  color: aqua;
+  opacity: 0.8;
+  outline: none;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input a {
+  color: #50c2ff;
+  margin: 3px;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input button#submitBtn {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: aqua;
+  background-color: #049104;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: none;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.add-new-group .add-new-group-form form .form-control .form-input button#submitBtn:hover, .add-new-group .add-new-group-form form .form-control .form-input button#submitBtn:focus, .add-new-group .add-new-group-form form .form-control .form-input button#submitBtn:active {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.login-register {
+  background-color: #020f06;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-register .header-desc {
+  width: 95%;
+  max-width: 750px;
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.login-register .header-desc label {
+  font-size: 30px;
+  color: #09ba09;
+  opacity: .8;
+}
+
+.login-register .header-desc p {
+  opacity: 0.7;
+  color: aqua;
+  padding: 1rem 0;
+}
+
+.login-register .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.login-register .buttons .login, .login-register .buttons .register {
+  background-color: #015e01;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid aqua;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.login-register .buttons .login:active, .login-register .buttons .login:focus, .login-register .buttons .login:hover, .login-register .buttons .register:active, .login-register .buttons .register:focus, .login-register .buttons .register:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.login-register .buttons .login .login-button b, .login-register .buttons .login .register-button b, .login-register .buttons .register .login-button b, .login-register .buttons .register .register-button b {
+  font-size: 18px;
+}
+
+.login-register .buttons .login {
+  background-color: #111;
+}
+
+.form-container {
+  background-color: #020f06;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.form-container .all-content {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container .all-content h2 {
+  background-color: #207d1f;
+  padding: 5px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.form-container .all-content .close-pop-up-form {
+  background-color: #870016;
+  color: aqua;
+  opacity: .8;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  padding: 0 1rem;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.form-container .all-content .close-pop-up-form b {
+  font-size: 15px;
+}
+
+.form-container .all-content .close-pop-up-form svg {
+  width: 20px;
+  margin: 0 5px;
+}
+
+.form-container .all-content form {
+  width: 95%;
+  max-width: 300px;
+  background-color: #207d1f;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.form-container .all-content form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container .all-content form .form-control label {
+  font-size: 18px;
+  color: aqua;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.form-container .all-content form .form-control input {
+  direction: ltr;
+  width: 100%;
+  padding: 7px 14px;
+  outline: none;
+  border-radius: 3px;
+  border: 2px solid #4fe54f;
+}
+
+.form-container .all-content form .form-control button {
+  font-size: 17px;
+  padding: 8px;
+  outline: none;
+  border-radius: 3px;
+  border: 2px solid aqua;
+  opacity: .8;
+  background-color: #111;
+  color: white;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  margin: 14px 0;
+}
+
+.form-container .all-content form .form-control button:active, .form-container .all-content form .form-control button:focus, .form-container .all-content form .form-control button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  background-color: #222;
+}
+
+.show-form {
+  display: block !important;
+}
+
+.recent-groups {
+  background-color: #44043f;
+}
+
+.recent-groups h3 {
+  text-align: center;
+  font-size: 25px;
+  opacity: .7;
+  padding-top: 15px;
+}
+
+.recent-groups p {
+  opacity: .4;
+  margin-top: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+.recent-groups p svg {
+  width: 40px;
+  margin: 0 10px;
+}
+
+.recent-groups .scroll-recent-groups {
+  padding: 1rem;
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
+
+.recent-groups .scroll-recent-groups::-webkit-scrollbar {
+  background-color: transparent;
+  height: 10px;
+}
+
+.recent-groups .scroll-recent-groups::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #04ff00;
+}
+
+.recent-groups .scroll-recent-groups .recent-goup-card {
+  background-color: #1e0c30;
+  padding: 1rem;
+  width: 100%;
+  min-width: 300px;
+  max-width: 320px;
+  border-radius: 3px;
+}
+
+.recent-groups .scroll-recent-groups .recent-goup-card .recent-group-card-details {
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #111;
+  border-radius: 3px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.recent-groups .scroll-recent-groups .recent-goup-card .recent-group-card-details label {
+  font-size: 18px;
+  color: skyblue;
+  opacity: .6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recent-groups .scroll-recent-groups .recent-goup-card .recent-group-card-details label svg {
+  width: 18px;
+  margin: 0 5px;
+}
+
+.recent-groups .scroll-recent-groups .recent-goup-card .recent-group-card-details b {
+  margin: 5px 20px;
+  font-size: 14px;
+  color: #119f11;
+  opacity: .9;
+}
+
+.recent-groups .scroll-recent-groups .recent-goup-card .recent-group-card-details a {
+  padding: 10px;
+  background-color: #076f00;
+  border-radius: 3px;
+  color: aqua;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.search-for-group {
+  background-color: violet;
+}
+
+.container {
+  background: #082901;
+  padding: .1rem;
+}
+
+.container h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.container .whatsapp-groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .whatsapp-groups .whatsapp-group-card {
+  background: #0a9818;
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+@media screen and (min-width: 768px) {
+  .container .whatsapp-groups .whatsapp-group-card:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-box-shadow: 0px 0px 15px #222;
+            box-shadow: 0px 0px 15px #222;
+  }
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-icon svg, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-icon img {
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-goup-name {
+  text-align: center;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 350px;
+  overflow: auto;
+  margin: 5px 0;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-goup-name a {
+  font-size: 25px;
+  opacity: .8;
+  color: #04fb00;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .3rem;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 350px;
+  overflow: auto;
+  margin: 5px 0;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-link b {
+  font-size: 20px;
+  color: aqua;
+  opacity: .7;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-link a {
+  font-size: 14px;
+  color: #23a0ee;
+  text-decoration: none;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category {
+  width: 100%;
+  max-width: 350px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 3px;
+  overflow: auto;
+  margin: 3px 0;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .desc-header, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .category-header, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .desc-header, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .category-header {
+  background-color: #444343;
+  width: 100%;
+  padding: .5rem;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .desc-header b, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .category-header b, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .desc-header b, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .category-header b {
+  font-size: 20px;
+  opacity: .7;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .desc-text, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .category, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .desc-text, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .category {
+  padding: .5rem;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .desc-text p, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .desc-text h3, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .category p, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .category h3, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .desc-text p, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .desc-text h3, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .category p, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .category h3 {
+  font-size: 15px;
+  color: #baff53;
+  opacity: .7;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-description .category p, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-category .category p {
+  font-size: 18px;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-clicks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .2rem;
+  margin: 10px 0;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-clicks .count {
+  margin: 0 10px;
+  background: #222;
+  padding: 2px 5px;
+  color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 3px;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-clicks .count span svg {
+  width: 15px;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin: 10px 0;
+  margin-bottom: 1rem;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .like, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .dislike {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .like {
+  color: #67ff48;
+  border: 2px solid #199600;
+  background-color: #025c00;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .like:hover, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .like:active {
+  border: 2px solid #216713;
+  background-color: #0b9509;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .dislike {
+  color: #ff8f67;
+  border: 2px solid #9d2d04;
+  background-color: #842908;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .dislike:hover, .container .whatsapp-groups .whatsapp-group-card .whatsapp-group-votes .dislike:active {
+  border: 2px solid #74280c;
+  background-color: #cb5327;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .btns a {
+  text-decoration: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 3rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  background: #39b0e7;
+  opacity: .8;
+  margin: 5px 0;
+  font-weight: 700;
+  width: 100%;
+  max-width: 350px;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .btns a svg {
+  width: 20px;
+  margin-left: 5px;
+}
+
+.container .whatsapp-groups .whatsapp-group-card .btns .enter:hover, .container .whatsapp-groups .whatsapp-group-card .btns .enter:active {
+  background-color: #222;
+  color: #fff;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.container .whatsapp-groups .whatsapp-group-card .btns .report:hover, .container .whatsapp-groups .whatsapp-group-card .btns .report:active {
+  background-color: #742407;
+  color: orangered;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  background: #333;
+}
+
+footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+@media screen and (max-width: 500px) {
+  footer .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 3.5rem;
+  }
+}
+
+footer .links .footer-links, footer .links .info-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .links .footer-links a, footer .links .info-links a {
+  color: #1265ca;
+  font-weight: 700;
+  text-decoration: none;
+  margin: .5rem 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  display: inline-block;
+}
+
+footer .links .footer-links a svg, footer .links .info-links a svg {
+  width: 20px;
+  margin-left: 7px;
+}
+
+footer .links .footer-links a:hover, footer .links .footer-links a:active, footer .links .info-links a:hover, footer .links .info-links a:active {
+  color: skyblue;
+}
+
+footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: auto;
+  gap: 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+footer .social-links a svg {
+  width: 30px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+footer .social-links a svg:hover, footer .social-links a svg:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+
+footer .copyright-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer .copyright-info p {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+footer .copyright-info p a {
+  color: #1265ca;
+  font-weight: bold;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

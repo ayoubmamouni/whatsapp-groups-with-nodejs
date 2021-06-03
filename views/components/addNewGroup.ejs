@@ -1,0 +1,78 @@
+<div class="add-new-group">
+    <div class="add-group-btn">
+        <div class="button-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path
+                    d="M24,4C12.972,4,4,12.972,4,24s8.972,20,20,20s20-8.972,20-20S35.028,4,24,4z M32.5,25.5h-7v7c0,0.829-0.671,1.5-1.5,1.5s-1.5-0.671-1.5-1.5v-7h-7c-0.829,0-1.5-0.671-1.5-1.5s0.671-1.5,1.5-1.5h7v-7c0-0.829,0.671-1.5,1.5-1.5s1.5,0.671,1.5,1.5v7h7c0.829,0,1.5,0.671,1.5,1.5S33.329,25.5,32.5,25.5z"
+                    fill="#FFFFFF" />
+            </svg>
+            <b>اضافة مجموعة</b>
+        </div>
+    </div>
+
+
+    <!-- Add new group form -->
+    <div class="add-new-group-form">
+        <form>
+
+            <div class="form-control">
+                <div class="form-input full-name-div">
+                    <label for="g-name">اسم المجموعة <span>(30 حرف الحد القصى)</span> <span
+                            class="required">مطلوب*</span></label>
+                    <input type="text" id="g-name" placeholder="ادخل اسم المجموعة" maxlength="30">
+                </div>
+            </div>
+
+            <div class="form-control">
+                <div class="form-input country-div">
+                    <label for="country">الدولة <span>(15 حرف الحد القصى)</span> <span class="required">مطلوب*</span>
+                    </label>
+                    <input type="text" id="country" placeholder="ادخل  اسم الدولة" maxlength="15">
+                </div>
+            </div>
+
+            <div class="form-control">
+                <div class="form-input full-name-div">
+                    <label for="link">رابط المجموعة <span class="required">مطلوب*</span></label>
+                    <input type="text" id="link" placeholder="Ex: https://whatsapp.me/whatever" maxlength="40">
+                </div>
+            </div>
+
+            <div class="form-control">
+                <div class="form-input category-div">
+                    <label for="category">التصنيف <span class="required">مطلوب*</span></label>
+                    <select name="categories" id="category">
+                        <option>اختر التصنيف</option>
+                        <option value="">فكاهة مرح</option>
+                        <option value="">رياضة</option>
+                        <option value="">حوار</option>
+                        <option value="">التعلم</option>
+                        <option value="">تكنولوجية</option>
+                        <option value="">تطبيقات</option>
+                        <option value="">فيديوهات</option>
+                        <option value="">فن</option>
+                        <option value="">شيء اخر</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <div class="form-input full-name-div">
+                    <label for="description">وصف المجموعة <span>(150 حرف الحد القصى)</span> <span
+                            class="optional">اختياري</span></label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <div class="form-input country-div">
+                    <label for="country">
+                        <p>قبل النشر تأكد ان مجموعتك لا تخالف <a href="#">شروط الاستخدام</a></p></span>
+                    </label>
+                    <button type="submit" id="submitBtn">نشر</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
