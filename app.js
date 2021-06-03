@@ -1,11 +1,14 @@
 const express = require('express')
-const morgan = require('morgan')
 const app = express()
+
+if (process.env !== 'production') {
+    const morgan = require('morgan')
+    app.use(morgan('dev'))
+}
 
 
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
-app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
     res.render('home')
