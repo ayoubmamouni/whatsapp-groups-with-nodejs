@@ -6,7 +6,6 @@ if (process.env !== 'production') {
     app.use(morgan('dev'))
 }
 
-
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
 
