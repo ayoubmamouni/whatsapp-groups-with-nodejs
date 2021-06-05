@@ -1,3 +1,37 @@
 .search-for-group{
-    background-color: violet;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    background-color: #082901;
+    @media screen and (max-width: 500px) {
+        flex-direction:column;
+    }
+    b{
+        font-size: 1.5rem;
+        opacity: .7;
+    }
+    .content{
+        #search-form{
+            .form-group{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                input, button{
+                    padding: 5px 20px;
+                    outline: none;
+                    border: 1px solid aqua;
+                    border-radius: 3px;
+                    font-size: 15px;
+                }
+                button{
+                    &:active{
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
 }

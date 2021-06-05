@@ -1,0 +1,43 @@
+.filter-groups{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    background-color: #082901;
+    @media screen and (max-width: 500px) {
+        flex-direction:column;
+    }
+    b{
+        font-size: 1.5rem;
+        opacity: .7;
+    }
+    .filter-form{
+        select{
+            width:150px;
+            font-weight: 700;
+            padding: 5px 15px;
+            outline: none;
+            border: 2px solid aqua;
+            border-radius: 3px;
+            option{
+                font-weight: 700;
+                background-color: rgb(15, 72, 15);
+                color: aqua;
+                opacity: 0.8;
+                outline: none;
+            }
+        }
+        button{
+            padding: 5px 20px;
+            outline: none;
+            border: 1px solid aqua;
+            border-radius: 3px;
+            font-size: 15px;
+            &:active{
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}

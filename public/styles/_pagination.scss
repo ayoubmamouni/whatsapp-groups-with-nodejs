@@ -1,0 +1,83 @@
+.pagination{
+    background: rgba(0, 0, 0, 0.2);
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 230ms;
+    .load-more{
+        display: flex;
+        align-items: center;
+        outline: none;
+        border: 3px solid aqua;
+        border-radius:3px;
+        background-color: rgb(0, 171, 0);
+        opacity: 0.8;
+        padding: 0.5em 1rem;
+        font-size: 1rem;
+        transition: 230ms;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        &:active{
+            top: 2px;
+        }
+    }
+    .btn-txt{
+        margin: 0 3px;
+        background-color: rgb(0, 171, 0);
+    }
+    .animations{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: 230ms;
+        position: absolute;
+        transform: translateX(-10%);
+        z-index: -1;
+        div{
+            width: 3px;
+            height: 3px;
+            margin: 0 2px;
+            border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+            background-color: black;
+        }
+        div:nth-child(odd){
+            animation: 400ms divAnimationsODD infinite alternate linear;
+        }
+        div:nth-child(even){
+            animation: 400ms divAnimationsEVEN infinite alternate linear;
+        }
+    }
+
+    .active{
+        position: relative !important;
+        transform: translateX(0) !important;
+    }
+}
+
+@keyframes divAnimationsODD{
+    0%{
+        transform: scale(1);
+        position: relative;
+        top: 3px;
+    }
+    100%{
+        transform: scale(1.2);
+        position: relative;
+        top: 0;
+    }
+}
+@keyframes divAnimationsEVEN{
+    0%{
+        transform: scale(1.2);
+        position: relative;
+        bottom: 3px;
+    }
+    100%{
+        transform: scale(1);
+        position: relative;
+        bottom: 0;
+    }
+}

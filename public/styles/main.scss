@@ -7,14 +7,16 @@ body{
   overflow-x: hidden
 }
 
-@import './barTop';
+// @import './barTop';
 //whatsapp section
 @import './whatsapp-section';
 @import './addNew';
 @import './login-register';
 @import './login-register-pop-up-form';
-@import './recent-groups';
 @import './search-for-group';
+@import './recent-groups';
+@import './filter-groups';
+
 
 .container{
   background:#082901;
@@ -25,10 +27,24 @@ body{
     font-size: 2rem;
   }
   .whatsapp-groups{
-    display: flex;
+    transition: 300ms;
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: center;
+    grid-column-gap: .5rem;
+    @media screen and (min-width: 1640px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .5rem;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1440px) {grid-template-columns: repeat(4, auto);}
+    @media screen and (min-width: 768px) and (max-width: 992px) {grid-template-columns: repeat(3, auto);}
+    @media screen and (min-width: 500px) and (max-width: 768px) {grid-template-columns: repeat(2, auto);}
+    @media screen and (max-width: 500px) {grid-template-columns: repeat(1, auto);}
     @import './wp-card';
   }
 }
 
-
+@import './pagination';
 @import './footer';
